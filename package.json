@@ -1,0 +1,22 @@
+{
+  "name": "skay-ai-widget",
+  "version": "1.0.0",
+  "description": "AI-консультант Скай для skay.ua — розумний чат-віджет по каталогу товарів (Google Gemini API)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node tests/search-regression.js && node tests/finder-regression.js && node tests/usecase-regression.js && node tests/tradein-followup-regression.js && node tests/operator-connect-regression.js && node tests/iphone-flow-regression.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fast-xml-parser": "^4.5.7",
+    "node-cron": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

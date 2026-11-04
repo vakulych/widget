@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <title>Skay.ua — демо сторінка з віджетом Скай</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: -apple-system, Arial, sans-serif; margin: 0; padding: 40px; background: #f6f2f7; color: #2b1533; }
+    h1 { font-size: 22px; }
+    p { color: #6b5a70; max-width: 560px; }
+    code { background: #eee3f0; padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>Skay.ua — демо сторінка</h1>
+  <p>Це тестова сторінка. Натисніть на рожево-фіолетову кульку внизу справа, щоб відкрити чат зі Скаєм.
+  На реальному сайті достатньо вставити один <code>&lt;script&gt;</code> тег (див. README.md) перед закриваючим <code>&lt;/body&gt;</code>.</p>
+
+  <!--
+    data-api-base — адреса, де живе ваш бекенд (server.js).
+    Якщо віджет і бекенд на одному домені — можна лишити порожнім.
+  -->
+  <script>
+    // Коли demo.html відкрито статичним preview-сервером на :4173,
+    // сам API працює окремо через `npm start` на :3000.
+    // У штатному маршруті Express (/widget/demo.html) запит іде на той самий origin.
+    (function () {
+      var widget = document.createElement("script");
+      widget.src = "./widget.js";
+      widget.setAttribute("data-api-base", location.port === "4173" ? "http://127.0.0.1:3000" : "");
+      document.body.appendChild(widget);
+    })();
+  </script>
+</body>
+</html>

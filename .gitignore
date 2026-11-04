@@ -1,0 +1,13 @@
+.env
+node_modules/
+data/catalog.cache.json
+data/gemini-cache.json
+data/embeddings.bin
+data/embeddings.meta.json
+
+skay_feed_cache_body.xml
+.DS_Store
+public/.DS_Store
+node_modules/
+.env
+skay_feed_cache_body.xml

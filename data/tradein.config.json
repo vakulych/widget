@@ -1,0 +1,25 @@
+{
+  "_comment": "Ціни в прайсі — це ціни викупу в USD (підтверджено). Значення в multipliers — ПРЕДБАЧЕНІ, їх треба підтвердити бізнесом.",
+  "currency": "USD",
+  "usdToUah": null,
+  "roundUahTo": 50,
+  "multipliers": {
+    "screen": {
+      "ideal": 1.0,
+      "scratches": 0.92,
+      "cracked": 0.7,
+      "broken": 0.45
+    },
+    "battery": {
+      "90plus": 1.0,
+      "80to89": 0.93,
+      "below80": 0.85,
+      "unknown": 0.9
+    },
+    "body": {
+      "ok": 1.0,
+      "dents": 0.92,
+      "bent": 0.75
+    }
+  }
+}
